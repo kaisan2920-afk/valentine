@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Harshu 💕</title>
+
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#ffd1e8,#fff);text-align:center;overflow-x:hidden}
+.page{display:none;padding:80px 20px}.show{display:block}
+button{padding:15px 40px;border:none;border-radius:40px;background:#ff6b9d;color:white;font-size:20px;cursor:pointer}
+.card{background:white;border-radius:20px;padding:30px;max-width:750px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.heart{position:fixed;font-size:22px;animation:float 6s infinite}
+@keyframes float{from{bottom:-20px;opacity:1}to{bottom:100%;opacity:0}}
+.photos img{width:200px;border-radius:15px;margin:10px}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="jhol.mp3" type="audio/mpeg">
+</audio>
+
+<div id="page1" class="page show">
+<h1>Harshu 💖</h1>
+<p>Nee kosam oka chinna surprise undi…</p>
+<button onclick="openLetter()">OK 💌</button>
+</div>
+
+<div id="page2" class="page">
+<div class="card">
+<h2>Dear Harshu ❤️</h2>
+
+<p>
+Nuvvu na life lo vachaka anni beautiful ga maripoyayi ✨<br><br>
+Nee navvu chusthe automatic ga happy aipothanu 💕<br><br>
+Harshu, nuvvu na heart lo chala special place lo unnav ❤️<br><br>
+Prathi roju nee gurinchi alochistunta… nee voice vintene smile vastundi 💖<br><br>
+Nuvvu na lucky charm laanti ammayi 💝 nee presence matrame chalu na day bagundadaniki.<br><br>
+Nuvvu pakkana unte world motham slow aipoyinattu anipistundi 🌸<br><br>
+Nee eyes lo chinna sparkle chusthe, na problems anni marchipotha ✨<br><br>
+Nee smile na strength Harshu… nee happiness na priority ❤️<br><br>
+Nenu cheppaleni antha istam ninnu… kani ee letter lo chinna part matrame rasanu 💕<br><br>
+With all my heart,<br><b>Kaisan 💖</b>
+</p>
+
+<h3>Our Photos 📸</h3>
+<div class="photos">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+
+</div>
+</div>
+
+<script>
+function openLetter(){
+document.getElementById("page1").classList.remove("show");
+document.getElementById("page2").classList.add("show");
+document.getElementById("music").play();
+createHearts();
+}
+function createHearts(){
+setInterval(()=>{
+let h=document.createElement("div");
+h.innerHTML="💖";
+h.className="heart";
+h.style.left=Math.random()*100+"%";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},400);
+}
+</script>
+
+</body>
+</html>
